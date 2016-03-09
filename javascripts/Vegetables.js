@@ -1,4 +1,5 @@
 var SandwichMaker = (function(sandwichVegetables){
+
   var Vegetables = {
     'Lettuce'       : 0.05,
     'Onions'        : 0.10,
@@ -7,9 +8,11 @@ var SandwichMaker = (function(sandwichVegetables){
     'Olives'        : 0.35,
     'Mushrooms'     : 0.25
   };
+
   sandwichVegetables.getVegetables = function () {
     return Vegetables;
   }
+  
   return sandwichVegetables
 }(SandwichMaker || {}));
 

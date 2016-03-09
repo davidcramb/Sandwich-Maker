@@ -1,4 +1,5 @@
 var SandwichMaker = (function(sandwichCheese){
+
   var Cheese = {
   'American'  : 0.10,
   'Swiss'     : 0.50,
@@ -7,9 +8,11 @@ var SandwichMaker = (function(sandwichCheese){
   'Parmesan'  : 0.10,
   'Cheddar'   : 0.30,
   };
+
   sandwichCheese.getCheese = function () {
     return Cheese;
   }
+  
   return sandwichCheese
 }(SandwichMaker || {}));
 

@@ -1,4 +1,5 @@
 var SandwichMaker = (function(sandwichCondiments){
+
   var Condiments = {
   'Mustard'      : 0.05,
   'Spicy Mustard': 0.10,
@@ -10,9 +11,11 @@ var SandwichMaker = (function(sandwichCondiments){
   'Relish'       : 0.15,
   'Spicy Relish' : 0.20  
   };
+
   sandwichCondiments.getCondiments = function () {
     return Condiments;
   }
+  
   return sandwichCondiments
 }(SandwichMaker || {}));
 
