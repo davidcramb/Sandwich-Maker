@@ -10,16 +10,18 @@ var SandwichMaker = (function(sandwichMeats){
     'None'     : 10.00
     };
 
-    var meatHolder = [];
+
 
     sandwichMeats.getMeats = function() {
-      console.log(Meats)
+      return Meats      
     };
+    
+    //work on method for adding meat selection to 
     sandwichMeats.addMeats = function () {
       for (prop in Meats){
         meatHolder.push(prop);
-        console.log(meatHolder)
-      }
+        // console.log(meatHolder)
+      };
 
     }
 
