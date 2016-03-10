@@ -3,7 +3,7 @@ var meatLine = document.getElementById('meats');
 var cheeseLine = document.getElementById('cheese');
 var condimentLine = document.getElementById('condiments');
 var vegetableLine = document.getElementById('vegetables');
-  //how can I make this cleaner?
+  //how can I make this cleaner? May make bread and meat etc. objects with their targets
 var listBread = SandwichMaker.getBread();  
 var listMeats = SandwichMaker.getMeats();
 var listVegetables = SandwichMaker.getVegetables();  
@@ -26,5 +26,16 @@ for (var prop in listCheese) {
   cheeseLine.innerHTML += `<option value="${prop}">${prop}</section>`;
 };
 
-var selection = document.getElementsByTagName('select')
+//event listener for selection in select element
+var selection = document.getElementsByTagName('option')
+for ( var i = 0; i < selection.length; i++) {
+  selection.item(i).addEventListener('click', mouseClick)  
+};
+//how to select which option it is
+function mouseClick(event) {
+  var ingredient = event.target.innerHTML;
+  selectedToppings.push(ingredient)
+};
+
+var selectedToppings = [];
 

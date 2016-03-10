@@ -9,10 +9,14 @@ var SandwichMaker = (function(sandwichMeats){
   'Mystery'  : 2.50,
   'None'     : 10.00
   };
-  
+
   sandwichMeats.getMeats = function() {
     return Meats      
   };
+
+  sandwichMeats.addMeats = function(selection) {
+    
+  }
 
   return sandwichMeats
 }(SandwichMaker || {}));
