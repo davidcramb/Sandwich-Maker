@@ -14,6 +14,13 @@ var SandwichMaker = (function(sandwichCondiments){
 
   sandwichCondiments.getCondiments = function () {
     return Condiments;
+  };
+  sandwichCondiments.addCondiments = function(selection) {
+    if (ingredients.indexOf(selection) == -1){
+      ingredients.push(selection);
+      SandwichMaker.addTotalPrice(Condiments[selection]);
+    };
+    console.log(ingredients)
   }
   
   return sandwichCondiments

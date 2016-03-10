@@ -15,9 +15,7 @@ var SandwichMaker = (function(sandwichBread){
     if (ingredients.indexOf(selection) == -1){
       ingredients.push(selection);
       SandwichMaker.addTotalPrice(Bread[selection]);
- 
-  };
-    // console.log(Bread[ingredients])
+   };
     console.log(ingredients)
 
   }

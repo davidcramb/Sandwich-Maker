@@ -39,7 +39,15 @@ function getIngredient(event) {
 
   if (idCheck === 'bread') {
     SandwichMaker.addBread(ingredient)
-    } else console.log('no!');
+    } else if (idCheck === 'meats'){
+      SandwichMaker.addMeats(ingredient)
+    } else if (idCheck === 'cheese'){
+      SandwichMaker.addCheese(ingredient)
+    } else if (idCheck === 'condiments'){
+      SandwichMaker.addCondiments(ingredient)
+    } else if (idCheck === 'vegetables'){
+      SandwichMaker.addVegetables(ingredient)
+    };
   
 };
 var DOMOutput = document.getElementById('total')

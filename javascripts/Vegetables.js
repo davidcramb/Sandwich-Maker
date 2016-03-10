@@ -12,7 +12,13 @@ var SandwichMaker = (function(sandwichVegetables){
   sandwichVegetables.getVegetables = function () {
     return Vegetables;
   }
-  
+    sandwichVegetables.addVegetables = function(selection) {
+    if (ingredients.indexOf(selection) == -1){
+      ingredients.push(selection);
+      SandwichMaker.addTotalPrice(Vegetables[selection]);
+    };
+    console.log(ingredients)
+  }
   return sandwichVegetables
 }(SandwichMaker || {}));
 

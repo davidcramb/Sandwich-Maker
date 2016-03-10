@@ -15,7 +15,11 @@ var SandwichMaker = (function(sandwichMeats){
   };
 
   sandwichMeats.addMeats = function(selection) {
-    console.log('hi!')
+    if (ingredients.indexOf(selection) == -1){
+      ingredients.push(selection);
+      SandwichMaker.addTotalPrice(Meats[selection]);
+    };
+      console.log(ingredients)
   }
 
   return sandwichMeats

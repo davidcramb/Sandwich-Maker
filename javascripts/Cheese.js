@@ -11,8 +11,15 @@ var SandwichMaker = (function(sandwichCheese){
 
   sandwichCheese.getCheese = function () {
     return Cheese;
+  };
+  sandwichCheese.addCheese = function(selection) {
+    if (ingredients.indexOf(selection) == -1){
+      ingredients.push(selection);
+      SandwichMaker.addTotalPrice(Cheese[selection]);
+    };
+    console.log(ingredients)
   }
-  
+
   return sandwichCheese
 }(SandwichMaker || {}));
 
