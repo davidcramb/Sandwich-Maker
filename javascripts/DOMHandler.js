@@ -51,6 +51,10 @@ function getIngredient(event) {
   
 };
 var DOMOutput = document.getElementById('total')
+DOMOutput.addEventListener('click', function() {
+  console.log(DOMOutput)
+  DOMOutput.innerHTML = SandwichMaker.addFinalPrice();
+})
 var ingredients = [];
 
 

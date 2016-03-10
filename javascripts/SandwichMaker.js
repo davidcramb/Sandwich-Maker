@@ -6,11 +6,17 @@ var SandwichMaker = (function (){
     getTotalPrice: function () {
       return totalPrice;
     },
-    
+
     addTotalPrice: function (ingredientPrice) {
       totalPrice += ingredientPrice
       return totalPrice;
     },
+
+    addFinalPrice: function (){
+      finalSandwichPrice = SandwichMaker.getTotalPrice();
+      return finalSandwichPrice;
+    },
+
   };
 
 
