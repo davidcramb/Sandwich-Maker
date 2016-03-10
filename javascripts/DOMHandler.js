@@ -29,13 +29,21 @@ for (var prop in listCheese) {
 //event listener for selection in select element
 var selection = document.getElementsByTagName('option')
 for ( var i = 0; i < selection.length; i++) {
-  selection.item(i).addEventListener('click', mouseClick)  
+  selection.item(i).addEventListener('click', getIngredient)  
 };
 //how to select which option it is
-function mouseClick(event) {
-  var ingredient = event.target.innerHTML;
-  selectedToppings.push(ingredient)
-};
+function getIngredient(event) {
+  var ingredient = event.target.value;
+  var idCheck = event.target.parentElement.id;
+  console.log(idCheck)
 
-var selectedToppings = [];
+  if (idCheck === 'bread') {
+    SandwichMaker.addBread(ingredient)
+    } else console.log('no!');
+  
+};
+var DOMOutput = document.getElementById('total')
+var ingredients = [];
+
+
 

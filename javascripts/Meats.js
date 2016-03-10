@@ -15,7 +15,7 @@ var SandwichMaker = (function(sandwichMeats){
   };
 
   sandwichMeats.addMeats = function(selection) {
-    
+    console.log('hi!')
   }
 
   return sandwichMeats
